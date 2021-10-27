@@ -7,10 +7,10 @@
     <style type="text/css">
     body {background-color:black;
                     color: black;
-                    padding: 100px;
+                    padding: 10px;
                     font-family: Papyrus;
                     text-align: center;}
-                  h1 {color: White;}
+                  h1 {color: White; margin-top:0.25em;}
                   h2 {color: White;}
 
 .center {text-align: center; list-style-position: inside;}
@@ -34,21 +34,36 @@
     #table {
      background-color: #1C6EA4;
      display: block;
-     margin: 50px auto 0;
-     width: 150px;
-     height: 220px;
+     margin: 10px auto 0;
+     width: 155px;
+     height: 180px;
      color: #FFF;
      padding: 10px;
     }
 
 img { border-style: ridge; border-width: 10px; border-color:green white red white; padding: 1px}
 
-.mylinks {
-color: rgb(255, 255, 255); font-size: 14px; line-height: 14px; padding: 7px; border-radius: 9px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(rgb(28, 110, 164) 0%, rgb(35, 136, 203) 40%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px outset rgb(0, 0, 0); display: inline-block;}
+.myButton {
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
 .myButton:hover {
-background: #1C6EA4; }
+	background-color:#b34332;
+}
 .myButton:active {
-background: #144E75; }
+	position:relative;
+	top:1px;
+}
 
         </style>
         <body>
@@ -103,7 +118,7 @@ background: #144E75; }
        <td>2.8g</td>
         </tr>
         <tr>
-        <td>Total Carbohydrates</td>
+        <td>Carbohydrates</td>
         <td>5.2g</td>
         </tr>
         <tr>
@@ -115,15 +130,15 @@ background: #144E75; }
 
       </table>
       </div>
-      <div class="mylinks">
-      <a href="https://www.myfitnesspal.com/recipe/view/229832084254061"><button>Click for more Nutritional Info</button></a>
+      <div>
+      <a href="https://www.myfitnesspal.com/recipe/view/229832084254061" class="myButton">Click for more Nutritional Info</button></a>
 </div>
       <p class="center">
        <img height="350"width="370" src="Raw.jpg"Serving Sugestion" title="Raw Ingredients"/>
        <img height="350"width="370" src="finished.jpg"Serving Sugestion" title="Finished Sauce"/>
      </P>
     <div class="mylinks"> <p class="center">
-      <a href="https://www.instagram.com/amandajanex/"><button>Visit my Instagram for More Photos of this Recipe</button></a>
+      <a href="https://www.instagram.com/amandajanex/" class="myButton">Visit my Instagram for More Photos of this Recipe</button></a>
 </p>
 </div>
       </body>
