@@ -145,25 +145,70 @@ img { border-style: ridge; border-width: 10px; border-color:green white red whit
       <a href="https://www.instagram.com/amandajanex/" class="myButton">Visit my Instagram for More Photos of this Recipe</button></a>
 </p>
 </div>
+<br><br>
 
 <div id="aboutme" class="me">
-  <h3> About Me </h2>
+  <h2> About Me </h2>
     My name is Amanda and i made this web page for my GIS class
-    <button id="aboutmebutton">Click here to learn more about me.</button>
+    <br>
+    <button id="aboutmebutton">Toggle here to learn more about me.</button>
+    <br>
 
 
       <script>
         $("button#aboutmebutton").click( function() {
-            $("#aboutme_p").show();
+            $("#aboutme_p").toggle();
         });
+
+        $("button#aboutmebutton").click( function() {
+            $("#catpics").toggle();
+        });
+
      </script>
 <p hidden id="aboutme_p">
     I'm a student at
     <a href="https://www.msudenver.edu">
       Metropolitan State University Denver<a/>
-      where I am studying Geology and GIS.
-    </p>
+      where I am studying Geology and GIS
+      <br><br> Hover over photo for more info<br>
 
+
+
+      <img id="img_hover" width="200" height="220" src="https://i.redd.it/f5v38ysqegw71.jpg">
+      <figcaption id="cats" hidden> These are my cats Luci and Chewy! </figcaption>
+
+
+
+      <br>
+      <script>
+        $("#img_hover").hover( function() {
+          $("#cats").show();
+        })
+
+        $("#cats").click( function() {
+            $("img_cats").toggle();
+          });
+      </script>
+      <br>
+
+
+    </p>
+    <p hidden id="catpics">
+      Hover here to see more of my cats
+    </p>
+      <script>
+        $("#catpics").hover( function() {
+            $("#cats_p").show();
+        });
+     </script>
+<p hidden id="cats_p">
+
+
+      <img id="img_cats" width="200" height="220" src="https://i.redd.it/1jkyzj65ogw71.jpg">
+      <img id="img_cats" width="200" height="220" src="https://preview.redd.it/1z7fvsed5gw71.jpg?width=3024&format=pjpg&auto=webp&s=668689320d5073150811c8bf1f1659802d2766cd">
+      <img id="img_cats" width="200" height="220" src="https://preview.redd.it/fcms2ted5gw71.jpg?width=3024&format=pjpg&auto=webp&s=81f3a4803f3cf2ecc375133121ef41f30ed801be">
+
+    </p>
     </div>
 
       </body>
