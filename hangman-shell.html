@@ -19,8 +19,8 @@
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
 
-$("#guesses").html (guesses);
-$("#word").html (blanks);
+$("#guesses").html(guesses);
+$("#word").html(blanks);
 
 $(".letter").click(function(e) {
   //run this when a letter is clicked on
@@ -70,12 +70,9 @@ for (l of word) {
 
 
 
-      };
+     });
 
-    };
 
-  </script>
-</head>
 <body>
   <div id="game">
   <p>The word to guess is <b><span id="word"></span></b>.</p>
@@ -113,3 +110,7 @@ for (l of word) {
 </div>
 
 </body>
+});
+
+</script>
+</head>
