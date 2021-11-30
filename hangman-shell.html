@@ -42,7 +42,7 @@ if (guessed.includes(letter)) {
    //add the letter to array of guessed
    guessed = guessed + letter;
  //subtract a guess
- guesses = guesses -1;
+ guesses = guesses - 1;
  $("#guesses").html(guesses);
  if (guesses <= 0) {
     $("#messages").text( "Out of guesses! You Lose!");
@@ -52,8 +52,8 @@ if (guessed.includes(letter)) {
 
 //check the letters in word and see if there's a match
  var count = 0;
-for (1 of word) {
-  if (1 = letter) {
+for (l of word) {
+  if (l == letter) {
     blanks = blanks substring(0, count) + letter +
           blanks substring( (count+l), blanks. length);
         }
