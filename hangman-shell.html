@@ -19,10 +19,10 @@
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
 
-$("#guesses").html(guesses);
+$("#guesses").html (guesses);
 $("#word").html (blanks);
 
-$(".letter") .. click(function(e) {
+$(".letter").click(function(e) {
   //run this when a letter is clicked on
 
   //stop the function if the game is ouer
@@ -42,10 +42,10 @@ $("#messages").text{"The letter "+letter + " has already been guessed. "};
    //add the letter to array of guessed
    guessed = guessed + letter;
  //subtract a guess
- guesses = guesses - 1;
+ guesses = guesses -1;
  $("#guesses").html(guesses);
  if (guesses <= 0) {
-    $("#messages"). text( "Out of guesses! You Lose!");
+    $("#messages").text( "Out of guesses! You Lose!");
      finished = true;
 }
 }
