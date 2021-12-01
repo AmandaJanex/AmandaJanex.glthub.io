@@ -13,16 +13,16 @@
       // $(document) is the jQuery reference to the whole web page
       $(document).ready( function() {
         // put your javascript here
-        var word =   "c a t n i p"; // the word to guess
-        var blanks = "- - - - - - "; // this variable holds the temporary information
+        var word =   "h a n g m a n"; // the word to guess
+        var blanks = "- - - - - - -"; // this variable holds the temporary information
         var guesses = 10; // the number of guesses left
         var guessed  = []; // these are the letters that have already been guessed
         var finished = false; // change to true when the game is finished
 
-$("#guesses").html(guesses);
-$("#word").html(blanks);
+        $("#guesses").html(guesses);
+        $("#word").html(blanks);
 
-$(".letter").click(function(e) {
+        $(".letter").click(function(e)  {
   //run this when a letter is clicked on
 
   //stop the function if the game is ouer
@@ -44,7 +44,7 @@ if (guessed.includes(letter)) {
  //subtract a guess
  guesses = guesses - 1;
  $("#guesses").html(guesses);
- if (guesses >= 0) {
+ if (guesses <= 0) {
     $("#messages").text( "Out of guesses! You Lose!");
      finished = true;
 }
