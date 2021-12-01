@@ -50,17 +50,18 @@ if (guessed.includes(letter)) {
 }
 }
 
-//check the letters in word and see if there's a match
- var count = 0;
+// check the letter inthe word and see if there a match
+var count = 0;
 for (l of word) {
   if (l == letter) {
     blanks = blanks.substring(0, count) + letter +
-          blanks.substring((count+l),blanks.length);
-        }
-        count = count + 1;
-        {
-          //update the blanks
-          $("#word").html(blanks);
+             blanks.substring((count+1),blanks.length);
+           }
+  count = count + 1;
+}
+//update the blanks
+$("#word").html(blanks);
+
 
           //check if we've won
           if (! blanks.includes("-")) {
