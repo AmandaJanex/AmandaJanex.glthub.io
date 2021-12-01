@@ -32,11 +32,12 @@
             for (1 of word) {
               if (1 == letter) {
                 blanks = blanks.substring(0, count) + letter +
-                blanks.substring((count+1),blank.length);
+                         blanks.substring((count+1),blank.length);
               }
               count = count +1;
             }
-
+            //update the blanks
+            $("word").html(blanks);
         });
 
       });
