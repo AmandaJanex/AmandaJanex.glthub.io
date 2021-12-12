@@ -62,7 +62,7 @@
 			                         .setLatLng(e.latlng)
 			                            .setContent("You clicked the map at " + e.latlng.toString())
                               			.openOn(map);
-                                    
+
 			    console.log("Clicked on the map");
 	                                              }
 
@@ -70,10 +70,10 @@
 	                map.on('click', onMapClick);
                   var buildings;
 
-  // load GeoJSON from an external file
-  $.getJSON("buildings.json",function(data){
+          // load GeoJSON from an external file
+       $.getJSON("buildings.json",function(data){
 
-	// add GeoJSON layer to the map once the file is loaded
+	    // add GeoJSON layer to the map once the file is loaded
 	buildings = L.geoJson(data, {
 	        onEachFeature: function (feature,layer) {
 	            layer.bindPopup("Building Type: " + feature.properties.BLDG_TYPE +
@@ -83,7 +83,7 @@
 		                          }
             	        );
 
-	layerMenu.addOverlay(buildings, "Buildings");
+	         layerMenu.addOverlay(buildings, "Buildings");
 
                                               }
          );
