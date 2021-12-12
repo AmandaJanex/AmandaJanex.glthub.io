@@ -8,6 +8,7 @@
 <!-- Add the Leaflet JavaScript library -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
 <script>
 // wait for the page to load before running the javascript
 $(document).ready( function() {
@@ -109,9 +110,17 @@ layer.bindPopup("Building Type: " + feature.properties.BLDG_TYPE +
 });
 
 
-
 </script>
 </head>
+<style>
+html, body { height: 100%; }
+#map { height: 80%; width: 95%; }
+#map-title { width: 100%; }
+h1 {color: green;
+font-style: normal; font-family: system-ui;
+}
+</style>
+
 <style>
 html, body { height: 100%; }
 #map { height: 80%; width: 95%; }
@@ -119,16 +128,14 @@ html, body { height: 100%; }
 h1 {color: purple;
 font-style: normal; font-family: system-ui;
 }
+
 </style>
-
-
-
 
 <body>
 
 
 
-<div id="map-title"><h1>The Auraria Campus on a Leaflet Map</h1> </div>
+<div id="map-title"><h1>Auraria Campus on a Leaflet Map</h1> </div>
 <div id="map"></div>
 
 
