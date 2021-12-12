@@ -3,11 +3,14 @@
 
 <html lang="en" dir="ltr">
   <head>
+    <title>Leaflet Map</title>
     <!-- Our web map and content will go here -->
+
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/
     sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-
+    <!-- External Stylesheets -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin="">
@@ -18,7 +21,10 @@
     $(document).ready( function() {
 
 
-      <div id="map" style="width: 705px; height: 375px"></div>
+      <div id="map" style="width: 705px; height: 375px">
+      </div>
+
+
 
       <script>
       // Create variable to hold map element, give initial settings to map
@@ -72,8 +78,15 @@
                                                 }
                           );
 
+        <!-- Add the Leaflet JavaScript library -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
 
       </script>
+
+
+
 
 
 
