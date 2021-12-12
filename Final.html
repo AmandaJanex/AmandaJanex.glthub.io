@@ -3,9 +3,6 @@
 
 <html lang="en" dir="ltr">
   <head>
-
-  </head>
-  <body>
     <!-- Our web map and content will go here -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/
@@ -14,62 +11,72 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin="">
-  </script>
-
-  <div id="map" style="width: 705px; height: 375px"></div>
-
-  <script>
-  	// Create variable to hold map element, give initial settings to map
-  	var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 14});
-
-    // Add OpenStreetMap tile layer to map element
-    var defaultBase = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-                          { attribution: '© OpenStreetMap' }).addTo(map);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    // wait for the page to load before running the javascript
+    $(document).ready( function() {
 
 
-                                                                                       }
-                                 );
-     // Create point feature for Auraria Library
-      var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
+      <div id="map" style="width: 705px; height: 375px"></div>
 
-      // Create area feature for campus, style and add to map
-      var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
-	[39.748473, -105.002487], [39.740283, -104.999037]],
-	{color: 'blue', weight: 4}).addTo(map);
+      <script>
+      // Create variable to hold map element, give initial settings to map
+      var map = L.map('map',{ center: [39.743218, -105.004568], zoom: 14});
 
-  // Bind popup to Data Point object
-  myDataPoint.bindPopup("This is Auraria Library.");
-  // Bind popup to area object
-  myArea.bindPopup("Auraria Campus");
+      // Add OpenStreetMap tile layer to map element
+      var defaultBase = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+                            { attribution: '© OpenStreetMap' }).addTo(map);
 
-  // Create an Empty Popup
-  var popup = L.popup();
 
-// Write function to set Properties of the Popup
-  function onMapClick(e) {
-	popup
-    	.setLatLng(e.latlng)
-    	.setContent("You clicked the map at " + e.latlng.toString())
-    	.openOn(map);
-}
+                                                                                         }
+                                   );
+       // Create point feature for Auraria Library
+        var myDataPoint = L.marker([39.743119, -105.002959]).addTo(map);
 
-// Listen for a click event on the Map element
-map.on('click', onMapClick);
-  </script>
-  <head>
-  ...
+        // Create area feature for campus, style and add to map
+        var myArea = L.polygon([[39.740652, -105.010233], [39.743218, -105.011864],
+      [39.748473, -105.002487], [39.740283, -104.999037]],
+      {color: 'blue', weight: 4}).addTo(map);
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   ...
+      // Bind popup to Data Point object
+      myDataPoint.bindPopup("This is Auraria Library.");
+      // Bind popup to area object
+      myArea.bindPopup("Auraria Campus");
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-   // wait for the page to load before running the javascript
-   $(document).ready( function() {
-       // put your javascript here
-    });
-</script>
+      // Create an Empty Popup
+      var popup = L.popup();
+
+      // Write function to set Properties of the Popup
+      function onMapClick(e) {
+      popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+      }
+
+      // Listen for a click event on the Map element
+      map.on('click', onMapClick);
+
+
+      // load GeoJSON from an external file
+  $.getJSON("buildings.json",function(data){
+  	// add GeoJSON layer to the map once the file is loaded
+  	L.geoJson(data).addTo(map);
+  });
+
+      </script>
+
+
+
+
+
+
+
+
 
   </head>
-  </body>
+  <body>
+
+    </body>
 </html>
